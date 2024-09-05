@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove_Empty</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        .para1{
+            font-size: 26px;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h3>Empty / Remove</h3>
+    <div class="para1">Div with Class Para1</div>
+    <div>Div without Class</div><br>
+
+    <button id="rmv">Remove</button>
+    <button id="emt">Empty</button>
+
+
+    <script>
+        $(document).ready(function () {
+        $("#rmv").click(function(){
+            $("div").remove(".para1");
+        })
+
+        $("#emt").click(function(){
+            $("div").empty();
+        })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Style</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        .style1{
+            font-size: 26px;
+            color: green;
+        }
+
+        .style2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: 1px solid black;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate architecto quibusdam eos repudiandae harum nisi, ducimus accusantium laudantium consequuntur excepturi animi vel maiores vero doloremque, itaque dolor. Voluptatibus, eius corrupti.</p>
+
+    <script>
+        $(document).ready(function () {
+            // $("p").css("font-size", "40px");
+            $("p").css({"font-size":"20px","color":"blue","font-weight":"bold"});
+        });
+    </script>
+</body>
+</html>
