@@ -1,7 +1,7 @@
 <?php 
 require_once "dbconfig.php";
 
-//print_r($_GET);
+
 $serializedData = $_POST['mydata'];
 parse_str($serializedData, $data);
 //print_r($data);
