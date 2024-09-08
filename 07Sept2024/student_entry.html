@@ -25,7 +25,6 @@
 
     <script>
         $(document).ready(function () {
-            //get_students();
             $("#show").load("view.php");
 
             $("#btn1").click(function(){
@@ -34,15 +33,14 @@
                 $.post("insert.php", {mydata:formdata}, function(data,status){
                     alert(data);
                 });
-                //get_students();
                 $("#show").load("view.php");
-                
             });
-            // function get_students(){
-            //     $.post("view.php", function(data,status){
-            //     $("#show").html(data);
-            //     })
-            // }
+            
+            $(".stid").on('click',function(event){
+                event.preventDefault();
+                let sid = $(this).attr('value');
+                alert(sid);
+            })
         });
 
 

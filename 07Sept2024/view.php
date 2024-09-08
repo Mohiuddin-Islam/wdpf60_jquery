@@ -32,7 +32,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Address</th>
-
+            <th>Action</th>
         </tr>
         <?php 
         while($row = $sql->fetch_assoc()){ ?>
@@ -44,10 +44,23 @@
             <td><?php echo $row['email'] ?></td>
             <td><?php echo $row['phone'] ?></td>
             <td><?php echo $row['address'] ?></td>
+            <td><a href="#" class="stid" value="<?php echo $row['id'] ?>">Delete</a></td>
         </tr>
     <?php } ?>
         
-        
     </table>
+    <script>
+        $(document).ready(function () {
+            $(".stid").on('click',function(event){
+                event.preventDefault();
+                let sid = $(this).attr('value');
+                //alert(sid);
+
+                $.post("delete.php", {id:sid}, function(data, status){
+                    alert(data + "from delete page");
+                })
+            })
+        });
+    </script>
 </body>
 </html>
